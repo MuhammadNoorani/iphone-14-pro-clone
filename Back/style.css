@@ -1,0 +1,157 @@
+*
+{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+body
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: white;
+}
+
+.box
+{
+    position: relative;
+    width: 300px;
+    height: 600px;
+    border-radius: 50px;
+    background: grey;
+}
+.box::before
+{
+    content: '';
+    position: absolute;
+    inset: 3px;
+    background: black;
+    border-radius: 48px;
+}
+.inner
+{
+    position: absolute;
+    inset: 5px;
+    background: #574f6f;
+    background-size: cover;
+    background-position: center;
+    border-radius: 48px;
+    border: 3px solid silver;
+
+}
+.cameraHump
+{
+    position: relative;
+    width: 160px;
+    height: 175px;
+    right:-15px;
+    bottom: -10px;
+    border-radius: 48px;   
+    background-color: black;
+}
+.cameraHumpinner{
+    position: absolute;
+    inset: 5px;
+    background: #413b50;;
+    background-size: cover;
+    background-position: center;
+    border-radius: 48px;
+    border: 3px solid black;
+}
+.appleLogo
+{
+    position: relative;
+    width: 60px;
+    height: 60px;
+    right:-112px;
+    bottom: -100px;
+    top:110px;
+    border-radius: 35% 35% 41% 41% / 42% 42% 75% 75%;
+    background: silver;
+}
+.appleLogo:before{
+   background: silver;
+   content: '';
+   width: 18px;
+   height: 20px;
+   position: absolute;
+   margin: -22px 0 0 28px;
+   border-radius: 100px 0;
+   z-index: 5
+}
+.appleLogo:after{
+    background: #574f6f;
+    content: '';
+    width: 35px;
+    height: 35px;
+    position: absolute;
+    margin: 5px 0 0 45px;
+    border-radius: 50%;
+    z-index: 4;
+    box-shadow: -45px -7px 0 silver,
+    -18px -7px silver,
+    -30px -36px 0 #574f6f,
+    -22px 22px 0 silver,
+    -38px 22px 0  silver;
+}          
+    
+.hole{
+   position: absolute; 
+   background: black;
+   width: 65px;
+   height: 65px;
+   border-radius: 100%;
+}
+.hole::before{
+    content: '';
+    position: absolute;
+    inset: 6px;
+    background: #574f6f;
+    border-radius: 48px;
+}
+.hole::after{
+    content: '';
+    position: absolute;
+    inset: 8px;
+    background: black;
+    border-radius: 48px;
+}
+.hole.hole1{
+    top: 85px;
+    left: 8px;
+}
+.hole.hole2{
+    right : 2px;
+    bottom: 49px;
+}
+.hole.hole3{
+    top : 7px;
+    left : 8px;
+}
+.sensor{
+    position: absolute;
+    width:20px;
+    height:20px;
+    border-radius: 23px;
+    background: grey;
+    top:123px;
+    left:98px;
+}
+.flashlight{
+    position: absolute;
+    width: 22px;
+    height: 22px;
+    background: white;
+    border-radius: 100%;
+    top: 12px;
+    left: 94px;
+    opacity: 0;
+    transition: 0.5s;
+}
+.cameraHump:hover .flashlight{
+     opacity: 1;
+}
+
+
+
